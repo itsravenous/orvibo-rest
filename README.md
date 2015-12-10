@@ -22,4 +22,4 @@ curl -X PUT http://localhost:3000/D1B2F35A3C2A -H 'Content-Type: application/jso
 curl -X PUT http://localhost:3000/D1B2F35A3C2A -H 'Content-Type: application/json' -d '{"st":0}'
 ```
 
-Currently, when turning a switch on or off, the server will send a response as soon as the state change has been effected. It should really wait for the orvfms script to finish, which is usually a couple seconds later, as no further state change scan be made until then.
+Currently, when turning a switch on or off, the server will send a response as soon as the state change has been effected. It should really wait for the orvfms script to finish, which is usually a couple seconds later, as no further state changes can be made until then.
