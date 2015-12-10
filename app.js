@@ -11,14 +11,12 @@ var server = restify.createServer({
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.queryParser());
 server.use(restify.bodyParser());
-if (config.allowedClients !== '*') {
-	server.use(cors({
-		origin: function(origin, callback) {
-			var originIsWhitelisted = config.allowedClients.indexOf(origin) !== -1;
-			callback(null, originIsWhitelisted);
-		}
-	}));
-}
+server.use(cors({
+	origin: function(origin, callback) {
+		var originIsWhitelisted = config.allowedClients === '*' || config.allowedClients.indexOf(origin) !== -1;
+		callback(null, originIsWhitelisted);
+	}
+}));
 
 /**
  * Adds links to a svitch object
