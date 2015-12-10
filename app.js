@@ -5,7 +5,7 @@ var config = require('./config.json');
 var svitchManager = require('./svitch-manager');
 
 var server = restify.createServer({
-	name: 'orvibo-rest',
+	name: 'nm-vpn-rest',
 	version: '0.0.0'
 });
 server.use(restify.acceptParser(server.acceptable));
@@ -13,7 +13,7 @@ server.use(restify.queryParser());
 server.use(restify.bodyParser());
 server.use(cors({
 	origin: function(origin, callback) {
-		var originIsWhitelisted = config.allowedClients === '*' || config.allowedClients.indexOf(origin) !== -1;
+		var originIsWhitelisted = config.allowedClients.indexOf(origin) !== -1;
 		callback(null, originIsWhitelisted);
 	}
 }));
