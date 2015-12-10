@@ -1,0 +1,15 @@
+{
+  "name": "orvibo-rest",
+  "version": "0.0.0",
+  "description": "REST API wrapper around orvfms",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "restify": "^4.0.3"
+  }
+}
