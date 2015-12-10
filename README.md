@@ -1,16 +1,16 @@
 # Orvfms REST
 This is a (currently incredibly kludgy) node-based REST API wrapper around the inner workings of Fernando Silva's [orvfms](https://github.com/fernadosilva/orvfms). It is a means to an end at the moment (more on that later and elsewhere) but I do intend to develop it properly, beginning by properly separating the "lib" of orvfms from the app itself. In short, definitely don't use this for anything remotely important yet - I cannot be held responsible for setting your house on fire etc.
 
-# Setup
+## Setup
 Depending on your use case, either
 `cp config.nocors-example.json config.json`
 or
 `cp config.cors-example.jsson config.json`
 
-# Running
+## Running
 `node app.js`
 
-# Usage
+## Usage
 ```
 # Get switch list
 curl -X GET http://localhost:3000
