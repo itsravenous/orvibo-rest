@@ -5,7 +5,7 @@ var config = require('./config.json');
 var svitchManager = require('./svitch-manager');
 
 var server = restify.createServer({
-	name: 'nm-vpn-rest',
+	name: 'orvibo-rest',
 	version: '0.0.0'
 });
 server.use(restify.acceptParser(server.acceptable));
